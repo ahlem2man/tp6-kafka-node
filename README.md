@@ -24,15 +24,15 @@ graph LR
     C -->|insère| D[MongoDB]
     D -->|API REST| E[Client (Postman / navigateur)]
 
-1. Démarrer Zookeeper
+1. Démarrer Zookeeper :
 bin/zookeeper-server-start.sh config/zookeeper.properties
-2. Démarrer Kafka
+2. Démarrer Kafka :
 bin/kafka-server-start.sh config/server.properties
-3. Créer un topic
+3. Créer un topic :
 bin/kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
-4. Lancer le producteur
+4. Lancer le producteur :
 node producer.js
-5. Lancer le consommateur (enregistre dans MongoDB)
+5. Lancer le consommateur (enregistre dans MongoDB) :
 node consumer.js
 6. Démarrer l’API REST
 node api.js
