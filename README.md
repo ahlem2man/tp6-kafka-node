@@ -36,3 +36,7 @@ node producer.js
 node consumer.js
 6. Démarrer l’API REST :
 node api.js
+7. Accéder aux messages :
+ http://localhost:3000/messages
+
+
